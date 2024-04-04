@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <section>
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
-        <div className="relative w-[240px] lg:w-[420px] h-[240] lg:h-[420px] mb-8 lg:mb-0">
+        <div className="relative w-[240px] lg:w-[420px] h-[240px] lg:h-[420px] mb-8 lg:mb-0">
           <Image fill src={"/hero (1).svg"} alt="hero" />
         </div>
         <div className="flex flex-col items-center gap-y-8">
