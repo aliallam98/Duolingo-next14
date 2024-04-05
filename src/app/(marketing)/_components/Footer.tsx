@@ -40,7 +40,7 @@ const Footer = () => {
           <Image
             width={40}
             height={40}
-            alt="english"
+            alt="Italian"
             src={"/it.svg"}
             className="rounded-md mr-4"
           />
@@ -50,7 +50,7 @@ const Footer = () => {
           <Image
             width={40}
             height={40}
-            alt="english"
+            alt="Japanese"
             src={"/jp.svg"}
             className="rounded-md mr-4"
           />
