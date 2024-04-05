@@ -8,36 +8,6 @@ const LearnPage = () => {
     <div className="flex gap-10">
       <FeedWrapper>
         <FeedHeader title="English" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
-        <div className="bg-sky-500 w-full h-40" />
       </FeedWrapper>
       <StickyWrapper>
         <UserProgress
