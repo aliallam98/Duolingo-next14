@@ -13,6 +13,7 @@ export const getCourses = cache(async () => {
 export const getCourseById= cache(async (id: number) => {
   const data = await db.query.courses.findFirst({
     where: eq(courses.id, id),
+
     //populate units and lessons
   });
 
@@ -31,6 +32,9 @@ export const getUserProgress = cache(async () => {
 
   const data = await db.query.userProgress.findFirst({
     where: eq(userProgress.userId, userId),
+    with:{
+      activeCourse:true,
+    }
   });
 
   return data;

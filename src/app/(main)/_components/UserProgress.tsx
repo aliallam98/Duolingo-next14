@@ -1,10 +1,11 @@
+import { courses } from "@/DB/schema";
 import { Button } from "@/components/ui/button";
 import { InfinityIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 interface IProps {
-  activeCourse: any;
+  activeCourse: typeof courses.$inferSelect;
   hearts: number;
   points: number;
   hasActiveSubscription: boolean;
