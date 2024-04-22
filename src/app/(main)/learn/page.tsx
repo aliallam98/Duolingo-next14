@@ -4,6 +4,7 @@ import FeedWrapper from "../_components/FeedWrapper";
 import StickyWrapper from "../_components/StickyWrapper";
 import UserProgress from "../_components/UserProgress";
 import { redirect } from "next/navigation";
+import Unit from "./_components/Unit";
 
 const LearnPage = async () => {
   //Call DB
@@ -24,7 +25,15 @@ const LearnPage = async () => {
         <FeedHeader title={UserProgressData.activeCourse.title} />
         {UserUnitsData.map((unit) => (
           <div key={unit.id} className="mb-10">
-            {JSON.stringify(unit)}
+            <Unit
+              id={unit.id}
+              description={unit.description}
+              order={unit.order}
+              title={unit.title}
+              lessons={unit.lessons}
+              activeLesson={undefined}
+              activeLessonPercentage={0}
+            />
           </div>
         ))}
       </FeedWrapper>

@@ -45,7 +45,7 @@ const main = async () => {
 
     await db.insert(schema.units).values([
       {
-        courseId: 1,
+        courseId: 2,
         title: "Unit 1 ",
         description: "Learn basics of spanish",
         order: 1,
@@ -54,9 +54,34 @@ const main = async () => {
 
     await db.insert(schema.lessons).values([
       {
+        id:1,
         unitId: 1,
         title: "nouns",
         order: 1,
+      },
+      {
+        id:2,
+        unitId: 1,
+        title: "verbs",
+        order: 2,
+      },
+      {
+        id:3,
+        unitId: 1,
+        title: "verbs",
+        order: 3,
+      },
+      {
+        id:4,
+        unitId: 1,
+        title: "verbs",
+        order: 4,
+      },
+      {
+        id:5,
+        unitId: 1,
+        title: "verbs",
+        order: 5,
       },
     ]);
     await db.insert(schema.challenges).values([
