@@ -1,4 +1,4 @@
-import { getUserProgress } from "@/DB/queries";
+import { getUnits, getUserProgress } from "@/DB/queries";
 import FeedHeader from "../_components/FeedHeader";
 import FeedWrapper from "../_components/FeedWrapper";
 import StickyWrapper from "../_components/StickyWrapper";
@@ -8,7 +8,11 @@ import { redirect } from "next/navigation";
 const LearnPage = async () => {
   //Call DB
   const UserProgressPromise = getUserProgress();
-  const [UserProgressData] = await Promise.all([UserProgressPromise]);
+  const UserUnitsPromise = getUnits();
+  const [UserProgressData, UserUnitsData] = await Promise.all([
+    UserProgressPromise,
+    UserUnitsPromise,
+  ]);
 
   if (!UserProgressData || !UserProgressData?.activeCourseId) {
     redirect("/courses");
@@ -18,6 +22,11 @@ const LearnPage = async () => {
     <div className="flex gap-10">
       <FeedWrapper>
         <FeedHeader title={UserProgressData.activeCourse.title} />
+        {UserUnitsData.map((unit) => (
+          <div key={unit.id} className="mb-10">
+            {JSON.stringify(unit)}
+          </div>
+        ))}
       </FeedWrapper>
       <StickyWrapper>
         <UserProgress
