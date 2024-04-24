@@ -1,4 +1,5 @@
 import { Progress } from "@/components/ui/progress";
+import { useExitModel } from "@/store/exit-model";
 import { InfinityIcon, X } from "lucide-react";
 import Image from "next/image";
 
@@ -9,11 +10,12 @@ interface IProps {
 }
 
 const QuizHeader = ({ hearts, percentage, hasActiveSubscription }: IProps) => {
+  const { open } = useExitModel();
   return (
     <header className="pt-[20px] lg:pt-[50px] px-10 flex gap-x-7 items-center justify-between max-w-[1140px] mx-auto w-full">
       <X
         className="text-slate-500 hover:opacity-75 transition cursor-pointer"
-        onClick={() => {}}
+        onClick={open}
       />
       <Progress value={percentage} />
       <div className="text-rose-500 flex items-center font-bold">
