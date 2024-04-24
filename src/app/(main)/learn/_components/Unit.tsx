@@ -2,6 +2,15 @@ import { lessons, units } from "@/DB/schema";
 import UnitBanner from "./UnitBanner";
 import LessonButton from "./LessonButton";
 
+
+type Unit = {
+    id: number;
+    title: string;
+    description: string;
+    courseId: number | null;
+    order: number;
+  };
+
 interface IProps {
   id: number;
   order: number;
@@ -12,7 +21,7 @@ interface IProps {
   })[];
   activeLesson:
     | (typeof lessons.$inferSelect & {
-        unit: typeof units.$inferSelect;
+        unit: Unit
       })
     | undefined;
   activeLessonPercentage: number;
